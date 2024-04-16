@@ -10,18 +10,18 @@ const KeysPage = async () => {
   const stream = await getStreamByUserId(self.id);
 
   if (!stream) {
-    throw new Error("Stream not found");
+    throw new Error("Трансляция не найдена");
   }
 
   return ( 
     <div className="p-6">
       <div className="flex items-center justify-between mb-4">
         <h1 className="text-2xl font-bold">
-          Keys & URLs
+          Ключи & URLs
         </h1>
         <ConnectModal />
       </div>
-      <div className="space-y-4">
+      <div className="space-y-4"> 
         <UrlCard value={stream.serverUrl} />
         <KeyCard value={stream.streamKey} />
       </div>

@@ -8,11 +8,11 @@ const ErrorPage = () => {
   return ( 
     <div className="h-full flex flex-col space-y-4 items-center justify-center text-muted-foreground">
       <p>
-        Something went wrong
+        Что-то пошло не так
       </p>
       <Button variant="secondary" asChild>
         <Link href="/">
-          Go back home
+          Вернуться на домашнюю страницу
         </Link>
       </Button>
     </div>

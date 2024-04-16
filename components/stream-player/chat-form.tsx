@@ -68,7 +68,7 @@ export const ChatForm = ({
           onChange={(e) => onChange(e.target.value)}
           value={value}
           disabled={isDisabled}
-          placeholder="Send a message"
+          placeholder="Отправить сообщение"
           className={cn(
             "border-white/10",
             (isFollowersOnly || isDelayed) && "rounded-t-none border-t-0"
@@ -82,7 +82,7 @@ export const ChatForm = ({
           size="sm"
           disabled={isDisabled}
         >
-          Chat
+          Отправить
         </Button>
       </div>
     </form>

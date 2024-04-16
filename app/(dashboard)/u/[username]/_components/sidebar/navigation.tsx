@@ -17,22 +17,22 @@ export const Navigation = () => {
 
   const routes = [
     {
-      label: "Stream",
+      label: "Трансляция",
       href: `/u/${user?.username}`,
       icon: Fullscreen,
     },
     {
-      label: "Keys",
+      label: "Ключи",
       href: `/u/${user?.username}/keys`,
       icon: KeyRound,
     },
     {
-      label: "Chat",
+      label: "Чат",
       href: `/u/${user?.username}/chat`,
       icon: MessageSquare,
     },
     {
-      label: "Community",
+      label: "Сообщество",
       href: `/u/${user?.username}/community`,
       icon: Users,
     },

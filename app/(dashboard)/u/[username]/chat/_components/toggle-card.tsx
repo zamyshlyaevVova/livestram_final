@@ -25,8 +25,8 @@ export const ToggleCard = ({
   const onChange = () => {
     startTransition(() => {
        updateStream({ [field]: !value })
-        .then(() => toast.success("Chat settings updated!"))
-        .catch(() => toast.error("Something went wrong"));
+        .then(() => toast.success("Настройки чата обновлены!"))
+        .catch(() => toast.error("Что-то пошло не так"));
     });
   };
 

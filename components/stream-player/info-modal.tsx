@@ -41,11 +41,11 @@ export const InfoModal = ({
     startTransition(() => {
       updateStream({ thumbnailUrl: null })
         .then(() => {
-          toast.success("Thumbnail removed");
+          toast.success("Обложка удалена");
           setThumbnailUrl("");
           closeRef?.current?.click();
         })
-        .catch(() => toast.error("Something went wrong"));
+        .catch(() => toast.error("Что-то пошло не так"));
     });
   }
 
@@ -55,10 +55,10 @@ export const InfoModal = ({
     startTransition(() => {
       updateStream({ name: name })
         .then(() => {
-          toast.success("Stream updated");
+          toast.success("Информация о трансляции изменена");
           closeRef?.current?.click();
         })
-        .catch(() => toast.error("Something went wrong"))
+        .catch(() => toast.error("Что-то пошло не так"))
     });
   }
 
@@ -70,35 +70,35 @@ export const InfoModal = ({
     <Dialog>
       <DialogTrigger asChild>
         <Button variant="link" size="sm" className="ml-auto">
-          Edit
+          Изменить
         </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>
-            Edit stream info
+            Изменить информацию о трансляции
           </DialogTitle>
         </DialogHeader>
         <form onSubmit={onSubmit} className="space-y-14">
           <div className="space-y-2">
             <Label>
-              Name
+              Название
             </Label>
             <Input
               disabled={isPending}
-              placeholder="Stream name"
+              placeholder="Название трансляции"
               onChange={onChange}
               value={name}
             />
           </div>
           <div className="space-y-2">
             <Label>
-              Thumbnail
+              Обложка
             </Label>
             {thumbnailUrl ? (
               <div className="relative aspect-video rounded-xl overflow-hidden border border-white/10">
                 <div className="absolute top-2 right-2 z-[10]">
-                  <Hint label="Remove thumbnail" asChild side="left">
+                  <Hint label="Удалить обложку" asChild side="left">
                     <Button
                       type="button"
                       disabled={isPending}
@@ -140,7 +140,7 @@ export const InfoModal = ({
           <div className="flex justify-between">
             <DialogClose ref={closeRef} asChild>
               <Button type="button" variant="ghost">
-                Cancel
+                Отменить
               </Button>
             </DialogClose>
             <Button
@@ -148,7 +148,7 @@ export const InfoModal = ({
               variant="primary"
               type="submit"
             >
-              Save
+              Сохранить
             </Button>
           </div>
         </form>

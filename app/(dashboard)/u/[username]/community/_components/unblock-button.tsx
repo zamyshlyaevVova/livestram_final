@@ -18,8 +18,8 @@ export const UnblockButton = ({
   const onClick = () => {
     startTransition(() => {
       onUnblock(userId)
-        .then((result) => toast.success(`User ${result.blocked.username} unblocked`))
-        .catch(() => toast.error("Something went wrong"))
+        .then((result) => toast.success(`Пользователь ${result.blocked.username} разблокирован`))
+        .catch(() => toast.error("Что-то пошло не так"))
     });
   };
 
@@ -31,7 +31,7 @@ export const UnblockButton = ({
       size="sm"
       className="text-blue-500 w-full"
     >
-      Unblock
+      Разблокировать пользователя
     </Button>
   )
 }

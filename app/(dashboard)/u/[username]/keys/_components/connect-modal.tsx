@@ -42,10 +42,10 @@ export const ConnectModal = () => {
     startTransition(() => {
       createIngress(parseInt(ingressType))
         .then(() => {
-          toast.success("Ingress created");
+          toast.success("Подключение сгенерировано");
           closeRef?.current?.click();
         })
-        .catch(() => toast.error("Something went wrong"));
+        .catch(() => toast.error("Что-то пошло не так"));
     });
   }
 
@@ -53,12 +53,12 @@ export const ConnectModal = () => {
     <Dialog>
       <DialogTrigger asChild>
         <Button variant="primary">
-          Generate connection
+          Сгенерировать подключение
         </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Generate connection</DialogTitle>
+          <DialogTitle>Сгенерировать подключение</DialogTitle>
         </DialogHeader>
         <Select
           disabled={isPending}
@@ -75,23 +75,23 @@ export const ConnectModal = () => {
         </Select>
         <Alert>
           <AlertTriangle className="h-4 w-4" />
-          <AlertTitle>Warning!</AlertTitle>
+          <AlertTitle>Осторожно!</AlertTitle>
           <AlertDescription>
-            This action will reset all active streams using the current connection
+            Это действие приведет к сбросу всех активных потоков, использующих текущее соединение
           </AlertDescription>
         </Alert>
         <div className="flex justify-between">
           <DialogClose ref={closeRef} asChild>
             <Button variant="ghost">
-              Cancel
+              Отмена
             </Button>
           </DialogClose>
           <Button
             disabled={isPending}
             onClick={onSubmit}
-            variant="primary"
+            variant="primary" //default? 
           >
-            Generate
+            Сгенерировать
           </Button>
         </div>
       </DialogContent>

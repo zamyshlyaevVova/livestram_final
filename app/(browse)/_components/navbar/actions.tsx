@@ -16,7 +16,7 @@ export const Actions = async () => {
       {!user && (
         <SignInButton>
           <Button size="sm" variant="primary">
-            Login
+            Войти
           </Button>
         </SignInButton>
       )}
@@ -31,7 +31,7 @@ export const Actions = async () => {
             <Link href={`/u/${user.username}`}>
               <Clapperboard className="h-5 w-5 lg:mr-2" />
               <span className="hidden lg:block">
-                Dashboard
+                Панель трансляции
               </span>
             </Link>
           </Button>

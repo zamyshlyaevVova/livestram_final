@@ -29,16 +29,16 @@ export const Actions = ({
   const handleFollow = () => {
     startTransition(() => {
       onFollow(hostIdentity)
-        .then((data) => toast.success(`You are now following ${data.following.username}`))
-        .catch(() => toast.error("Something went wrong"))
+        .then((data) => toast.success(`Вы подписались на ${data.following.username}`))
+        .catch(() => toast.error("Что-то пошло не так"))
     });
   }
 
   const handleUnfollow = () => {
     startTransition(() => {
       onUnfollow(hostIdentity)
-        .then((data) => toast.success(`You have unfollowed ${data.following.username}`))
-        .catch(() => toast.error("Something went wrong"))
+        .then((data) => toast.success(`Вы отписались от ${data.following.username}`))
+        .catch(() => toast.error("Что-то пошло не так"))
     });
   }
 
@@ -71,8 +71,8 @@ export const Actions = ({
           : "fill-none"
       )} />
       {isFollowing
-        ? "Unfollow"
-        : "Follow"
+        ? "Отписаться"
+        : "Подписаться"
       }
     </Button>
   )

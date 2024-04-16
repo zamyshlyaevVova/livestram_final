@@ -48,7 +48,7 @@ export const ChatCommunity = ({
     return (
       <div className="flex flex-1 items-center justify-center">
         <p className="text-sm text-muted-foreground">
-          Community is disabled
+          Сообщество отключено
         </p>
       </div>
     );
@@ -58,12 +58,12 @@ export const ChatCommunity = ({
     <div className="p-4">
       <Input
         onChange={(e) => onChange(e.target.value)}
-        placeholder="Search community"
+        placeholder="Искать сообщество"
         className="border-white/10"
       />
       <ScrollArea className="gap-y-2 mt-4">
         <p className="text-center text-sm text-muted-foreground hidden last:block p-2">
-          No results
+          Ничего не найдено
         </p>
         {filteredParticipants.map((participant) => (
           <CommunityItem

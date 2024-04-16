@@ -15,7 +15,7 @@ export const Logo = () => {
       <div className="flex items-center gap-x-4 hover:opacity-75 transition">
         <div className="bg-white rounded-full p-1 mr-12 shrink-0 lg:mr-0 lg:shrink">
           <Image
-            src="/spooky.svg"
+            src="/zaceni-icon.svg" 
             alt="Gamehub"
             height="32"
             width="32"
@@ -26,10 +26,10 @@ export const Logo = () => {
           font.className
         )}>
           <p className="text-lg font-semibold">
-            Gamehub
+            Зацени Live!
           </p>
           <p className="text-xs text-muted-foreground">
-            Let&apos;s play
+            Пошли за покупками
           </p>
         </div>
       </div>
